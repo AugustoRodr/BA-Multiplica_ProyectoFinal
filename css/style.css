@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: 'Heebo', sans-serif;
+  color: black;
+}
+
+/* Barra de navegacion */
+.nav {
+  border: 2px solid red;
+  background-color: yellow;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav a {
+  background-color: white;
+  padding: 2px 10px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+/* Carrucel de promocion de descuentos */
+.section {
+  display: flex;
+  justify-content: space-around;
+  border: 5px solid rgb(60, 255, 0);
+}
+
+.section img {
+  width: 30vw;
+  height: 50vh;
+}
+
+/* Apartado de ofertas y nuevos*/
+.section-ofertas,
+.section-nuevos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section-ofertas article,
+.section-nuevos article {
+  border: 2px solid red;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 149);
+  /* margin: 0px 5px; */
+  width: 225px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.section-ofertas article img,
+.section-nuevos article img {
+  width: 100%;
+  height: 60%;
+}
+
+/* Pie de pagina */
+.footer {
+  background-image: linear-gradient(50deg, #e0a500, #fffb00);
+  margin-top: 10px;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+}

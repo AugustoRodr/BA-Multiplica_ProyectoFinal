@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/productos.css">
+  <title>Productos</title>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="../index.html">Inicio</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Mis compras</a>
+      <a href="#">Sobre nosotros</a>
+      <a href="./login.html">Iniciar sesion</a>
+    </nav>
+  </header>
+  <aside class="filtro-content">
+    <form action="" method="get" class="filtro-form">
+      <h3>Filtros</h3>
+      <label for="categoria">Categoria</label>
+      <select name="categoria" id="categoria">
+        <!-- El resto de opciones los agrego con javaScript -->
+        <option value="seleccione" selected>Seleccione</option>
+      </select><br>
+      <label for="talle">talle</label>
+      <select name="talle" id="talle">
+        <!-- El resto de opciones los agrego con javaScript -->
+        <option value="seleccione" selected>Seleccione</option>
+      </select><br>
+      <label for="marcas">Marcas</label>
+      <select name="marcas" id="marcas">
+        <!-- El resto de opciones los agrego con javaScript -->
+        <option value="seleccione">Seleccione</option>
+      </select><br>
+      <label for="genero">Genero</label>
+      <select name="genero" id="genero">
+        <option value="seleccione" selected>Seleccione</option>
+      </select>
+    </form>
+  </aside>
+  <section class="cards-content">
+    <div class="botones-content">
+      <button id="anterior">Anterior</button>
+      <button id="siguiente">Siguiente</button>
+    </div>
+    <article class="card">
+      <img src="../img/nuevos-articulos/art-2.jpg" alt="producto">
+      <div class="card-info">
+        <h4>Nombre del producto</h4>
+        <p class="descripcion">Descripcion del producto: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis
+          soluta
+          pariatur, ea asperiores ex iusto in</p>
+        <p>Precio: $XX.XX</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="../img/nuevos-articulos/art-1.jpg" alt="producto">
+      <div class="card-info">
+        <h4>Nombre del producto</h4>
+        <p class="descripcion">Descripcion del producto: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis
+          soluta
+          pariatur, ea asperiores ex iusto in</p>
+        <p>Precio: $XX.XX</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="../img/nuevos-articulos/art-1.jpg" alt="producto">
+      <div class="card-info">
+        <h4>Nombre del producto</h4>
+        <p class="descripcion">Descripcion del producto: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis
+          soluta
+          pariatur, ea asperiores ex iusto in</p>
+        <p>Precio: $XX.XX</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+    <article class="card">
+      <img src="../img/nuevos-articulos/art-1.jpg" alt="producto">
+      <div class="card-info">
+        <h4>Nombre del producto</h4>
+        <p class="descripcion">Descripcion del producto: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Perspiciatis
+          soluta
+          pariatur, ea asperiores ex iusto in</p>
+        <p>Precio: $XX.XX</p>
+        <button>Comprar</button>
+      </div>
+    </article>
+  </section>
+
+  <script src="../js/productos.js"></script>
+</body>
+
+</html>

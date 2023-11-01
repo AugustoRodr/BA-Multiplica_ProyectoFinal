@@ -109,50 +109,12 @@ const dbProductos = [
 
 
 let indiceMostrados = 0
-// let prodMostrados = []
-// function cargarProd(anterior = false) {
 
-//   const tarjetas = document.getElementById("cards-content").querySelectorAll(".card")
-//   // console.log(tarjetas)
-
-//   if (anterior === true) {
-//     if (prodMostrados.length > 4) {
-
-//       prodMostrados.splice(-4)
-//       let temp = prodMostrados.slice(-4)
-
-//       tarjetas.forEach((tarjeta, i) => {
-//         tarjeta.querySelector("#img-card").src = dbProductos[temp[i]].imagen
-//         tarjeta.querySelector("#card-nombre").textContent = dbProductos[temp[i]].nombre
-//         tarjeta.querySelector("#card-desc").textContent = dbProductos[temp[i]].descripcion
-//         tarjeta.querySelector("#card-precio").textContent = `Precio: $${dbProductos[temp[i]].precio.toFixed(2)}`
-
-//       })
-//       indiceMostrados -= 4
-//     }
-//     console.log(indiceMostrados)
-//   } else {
-//     if (indiceMostrados < dbProductos.length) {
-
-//       tarjetas.forEach((tarjeta) => {
-//         tarjeta.querySelector("#img-card").src = dbProductos[indiceMostrados].imagen
-//         tarjeta.querySelector("#card-nombre").textContent = dbProductos[indiceMostrados].nombre
-//         tarjeta.querySelector("#card-desc").textContent = dbProductos[indiceMostrados].descripcion
-//         tarjeta.querySelector("#card-precio").textContent = `Precio: $${dbProductos[indiceMostrados].precio.toFixed(2)}`
-//         prodMostrados.push(indiceMostrados)
-//         indiceMostrados += 1
-//       })
-//     }
-
-//   }
-//   console.log(prodMostrados)
-//   console.log(indiceMostrados)
-// }
-function mostrarProductos(inicio) {
+function mostrarProductos(inicio, productos = dbProductos) {
   const tarjetas = document.querySelectorAll(".card")
 
   for (let i = 0; i < 4; i++) {
-    const producto = dbProductos[inicio + i]
+    const producto = productos[inicio + i]
     const tarjeta = tarjetas[i]
     if (producto) {
       // tarjeta.style.display = "block"
@@ -165,15 +127,17 @@ function mostrarProductos(inicio) {
       nombre.textContent = producto.nombre
       desc.textContent = producto.descripcion
       precio.textContent = `Precio: $${producto.precio.toFixed(2)}`
-    } else {
+    }
+    // en caso de que no haber mas productos para mostrar cambio el display de las tarjetas para que no se muestren 
+    else {
       const tarjeta = tarjetas[i]
       tarjeta.style.display = "none"
     }
   }
 }
 
-function prodSiguiente() {
-  if (indiceMostrados + 4 < dbProductos.length) {
+function prodSiguiente(productos = dbProductos) {
+  if (indiceMostrados + 4 < productos.length) {
     indiceMostrados += 4
     mostrarProductos(indiceMostrados)
   }
@@ -184,7 +148,7 @@ function prodAnterior() {
     indiceMostrados -= 4
     mostrarProductos(indiceMostrados)
   }
-  // Mostrar las tarjetas ocultas si se llega al inicio y hay tarjetas ocultas
+  //en caso de que quiera retroceder en los productos mostrados verifico que haya tarjetas ocultas. Si los hay los muestro
   const tarjetas = document.querySelectorAll(".card");
   tarjetas.forEach((tarjeta) => {
     if (tarjeta.style.display === "none") {
@@ -207,3 +171,4 @@ const btnAnt = document.getElementById("anterior")
 btnAnt.addEventListener("click", () => {
   prodAnterior()
 })
+

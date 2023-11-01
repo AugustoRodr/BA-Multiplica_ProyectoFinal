@@ -17,7 +17,9 @@ header {
 
 nav {
   /* border: 2px solid red; */
-  background-color: yellow;
+  background-color: rgb(255, 255, 53);
+  /* background-color: #EBE76C; */
+  /* background-color: #F0B86E; */
   height: 40px;
   display: flex;
   align-items: center;
@@ -78,6 +80,7 @@ section .form-login,
 .msj-login,
 .msj-signup {
   background-color: rgb(255, 255, 53);
+  /* background-color: #F0B86E; */
   width: 50%;
   display: flex;
   flex-direction: column;

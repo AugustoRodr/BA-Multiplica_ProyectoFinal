@@ -2,16 +2,17 @@
 // base de datos improvisada
 const filtros = {
   categoria: ["calzados", "remeras", "pantalones", "camperas", "accesorios"],
-  talle: ["36", "37", "38", "39", "40", "41", "42"],
+  talle: [["XS", "S", "M", "L", "XL", "XXL"],
+  ["36", "37", "38", "39", "40", "41", "42"]],
   marcas: ["nike", "adidas", "stone", "puma", "reebok", "lecoqsportif", "otros"],
-  genero: ["hombre", "mujer", "todos"]
+  genero: ["hombre", "mujer", "unisex"]
 }
 // codigo simplificado usando la base de datos
 document.addEventListener("DOMContentLoaded", function () {
 
   for (let filtro in filtros) {
     const select = document.getElementById(filtro)
-    const opciones = filtros[filtro]
+    const opciones = filtro == "talle" ? filtros[filtro][0] : filtros[filtro]
 
     opciones.forEach((opcion) => {
       const option = document.createElement("option")
@@ -128,7 +129,7 @@ function mostrarProductos(inicio, productos = dbProductos) {
       desc.textContent = producto.descripcion
       precio.textContent = `Precio: $${producto.precio.toFixed(2)}`
     }
-    // en caso de que no haber mas productos para mostrar cambio el display de las tarjetas para que no se muestren 
+    // en caso precionar siguiente y no haber mas prodcutos mostrara los prod que queden y si alguna tarjeta queda vacias su display se cambia a none
     else {
       const tarjeta = tarjetas[i]
       tarjeta.style.display = "none"

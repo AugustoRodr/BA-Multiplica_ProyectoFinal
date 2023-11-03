@@ -25,16 +25,59 @@
   border-radius: 25px;
 }
 
-/* Carrucel de promocion de descuentos. Aplicar bootstrap!! */
-.section {
-  display: flex;
-  justify-content: space-around;
-  border: 5px solid rgb(60, 255, 0);
+/* Carrucel con o sin Booststrap */
+.carrusel {
+  width: 90%;
+  max-width: 120em;
+  height: 500px;
+  /* background-color: #c0c0c0; */
+  margin-left: 5%;
+  padding: 2em 0em;
+
+  overflow: hidden;
 }
 
-.section img {
-  width: 30vw;
-  height: 50vh;
+.carrusel .foco {
+  width: 300%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 0 0 0 2em; */
+  /* border: 2px solid red; */
+
+  transition: all .5s ease;
+  transform: translateX(-66%);
+
+  /* overflow: hidden; */
+}
+
+.carrusel img {
+  width: calc(100%/3 - 3.1em);
+  height: 100%;
+  /* padding: 2em; */
+}
+
+.carrusel .puntos {
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1em; */
+
+  list-style: none;
+}
+
+.carrusel .punto {
+  width: 1em;
+  height: 1em;
+  background-color: rgb(202, 202, 202);
+  margin: .5em 1em;
+  border-radius: 30px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Apartado de ofertas y nuevos*/

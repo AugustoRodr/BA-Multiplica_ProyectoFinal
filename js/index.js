@@ -5,9 +5,9 @@
 
 // imagenes para el slider
 const imgSlider = [
-  "../img/img-slider.jpg",
-  "../img/img-slider2.jpg",
-  "../img/img-slider3.jpg"
+  "./img/img-slider.jpg",
+  "./img/img-slider2.jpg",
+  "./img/img-slider3.jpg"
 ]
 
 // Evento cuando carga la pagina

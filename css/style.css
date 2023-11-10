@@ -32,7 +32,7 @@
   height: 500px;
   background-color: #e9e9e9;
   margin-left: 5%;
-  padding: 2em 0em;
+  padding: 2em 0;
   border-radius: 20px;
 
   overflow: hidden;
@@ -46,19 +46,15 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-around;
-  /* border: 2px solid red; */
 
   transition: all .5s ease;
   transform: translateX(-0%);
-
-  /* overflow: hidden; */
 }
 
 .carrusel img {
   /* Debe ser escalable. El width varia segun las catidades de fotos */
   /* width: calc(100%/4 - 4.1em); */
   height: 100%;
-  /* padding: 2em; */
 }
 
 .carrusel .puntos {
@@ -68,7 +64,6 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  /* padding: 1em; */
 
   list-style: none;
 }
@@ -87,28 +82,90 @@
   background-color: #ff8f10;
 }
 
+
+
 /* Apartado de ofertas y nuevos*/
 .section-ofertas,
 .section-nuevos {
+  width: 94.99%;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em;
+  border: 2px solid green;
 }
 
-.section-ofertas article,
-.section-nuevos article {
+.section-ofertas .card-content {
+  width: 90%;
+  border: 5px solid rgb(216, 219, 0);
+}
+
+.card-foco {
+  /* al igual que con el carrusel de promocion el width debe ser escalable y se debe ajustar dependiendo de cuantas tarjetas se desea mostrar */
+  width: 200%;
+  display: flex;
+  justify-content: space-around;
   border: 2px solid red;
+  transition: 0.5s ease;
+
+  transform: translateX(-50%);
+}
+
+.card-foco .card {
+  border: 0.1px solid black;
   border-radius: 20px;
-  background-color: rgb(255, 255, 149);
-  /* margin: 0px 5px; */
-  width: 225px;
-  height: 300px;
+  /*  el width debe ser escalable segun la cantidad de tarjetas */
+  width: calc(100%/10 - 2em);
+  height: 350px;
+
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+
   overflow: hidden;
 }
 
-.section-ofertas article img,
-.section-nuevos article img {
+.card .card-img,
+.card .card-info {
   width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-ofertas .card img {
+  width: 90%;
+  height: 90%;
+  border-radius: 20px;
+}
+
+.card-info .card-desc {
+  width: 90%;
   height: 60%;
+  overflow-y: scroll;
+  /* border: 1px solid red; */
+}
+
+.card-info .card-desc::-webkit-scrollbar {
+  display: none;
+}
+
+.next,
+.prev {
+  cursor: pointer;
+  color: black;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  /* border: 2px solid red; */
+  transition: 0.5s ease;
+}
+
+.next:hover,
+.prev:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 /* Pie de pagina */

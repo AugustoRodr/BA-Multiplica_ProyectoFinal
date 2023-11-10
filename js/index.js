@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const puntosSlider = document.getElementById("puntos")
   sectionSlider.style.width = `${100 * imgSlider.length}%`
 
-
   imgSlider.forEach((imgUrl, i) => {
     const img = document.createElement("img")
     img.src = imgUrl
@@ -44,7 +43,47 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       item.classList.add("activo")
     })
-
   })
-
 })
+
+
+// testeo de manejo de json
+// let jsonData
+// fetch("./js/articulos.json")
+//   .then(respuesta => {
+//     if (respuesta.ok) {
+//       console.log("Archivo encontrado")
+//     }
+//     return respuesta.json()
+//   })
+//   .then(data => {
+//     jsonData = data
+//     // console.log(jsonData)
+//     let etiqueta = document.getElementById("productos")
+//     jsonData.forEach((data, i) => {
+//       let text = document.createElement("h1")
+//       text.textContent = `${data.nombre}`
+//       etiqueta.appendChild(text)
+//     })
+//   })
+
+// Agregar funcionalidad al slider y/o tarjetas de Ofertas
+// - El funcionamiento debe ser similar al del productos.html pero de forma horizontal
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("./js/articulos.json")
+    .then(respuesta => {
+      if (respuesta.ok) {
+        console.log("Archivo encontrado")
+      }
+      return respuesta.json()
+    })
+    .then(data => {
+      console.log(data)
+      data.forEach((articulo, i) => {
+        console.log(articulo)
+      })
+    })
+})
+
+// Agregar funcionalidad a las tarjetas de Nuevos articulos

@@ -1,0 +1,110 @@
+[
+  {
+    "imagen": "../img/articulos-generales/art-calzado.jpg",
+    "nombre": "Zapatilla Nike",
+    "descripcion": "Zapatilla nike blanco con negro. Talles desde 36 al 43",
+    "precio": 1100,
+    "marca": "nike",
+    "talle": 37,
+    "genero": "unisex",
+    "oferta": true,
+    "nuevo": true,
+    "categoria": "calzados"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-calzado2.jpg",
+    "nombre": "Calzado Le Coq Sportif",
+    "descripcion": "Zapatilla Le Coq Sportif. Modelos con talle desde 40 al 43",
+    "precio": 1566.5,
+    "marca": "lecoqsportif",
+    "talle": 40,
+    "genero": "unisex",
+    "oferta": true,
+    "nuevo": false,
+    "categoria": "calzados"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-calzado3.jpg",
+    "nombre": "Nike Goretex",
+    "descripcion": "Calzado Nike Goretex, modelos con talles del 39 al 42",
+    "precio": 16600,
+    "marca": "nike",
+    "talle": 41,
+    "genero": "unisex",
+    "oferta": false,
+    "nuevo": false,
+    "categoria": "calzados"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-calzado4.jpg",
+    "nombre": "Calzado Adidas",
+    "descripcion": "Calzado Adidas rojo con blanco, modelos con talles del 39 al 42",
+    "precio": 14600,
+    "marca": "adidas",
+    "talle": 41,
+    "genero": "unisex",
+    "oferta": true,
+    "nuevo": false,
+    "categoria": "calzados"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-campera.jpg",
+    "nombre": "Campera con friza",
+    "descripcion": "Campera con friza en colo gris, rojo, negro y blanco. Talles desde L al XXL",
+    "precio": 8800,
+    "marca": "otros",
+    "talle": 41,
+    "genero": "hombre",
+    "oferta": true,
+    "nuevo": true,
+    "categoria": "camperas"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-campera2.jpg",
+    "nombre": "Campera Bomber",
+    "descripcion": "Campera Bomber para hombre color negro talles desde M al XXL",
+    "precio": 14600,
+    "marca": "otros",
+    "talle": 41,
+    "genero": "hombre",
+    "oferta": false,
+    "nuevo": false,
+    "categoria": "camperas"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-campera3.jpg",
+    "nombre": "Camperas rompe viento Nike",
+    "descripcion": "Camperas Nike rompe viento varios modelos y talles desde M a XL",
+    "precio": 4600,
+    "marca": "nike",
+    "talle": 41,
+    "genero": "hombre",
+    "oferta": false,
+    "nuevo": true,
+    "categoria": "camperas"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-campera4.jpg",
+    "nombre": "Chaleco rompe viento",
+    "descripcion": "Chaleco rompe viento en mofelos negro, girs y azul oscuro. Talles XL,XXL y XXXL",
+    "precio": 5600,
+    "marca": "otros",
+    "talle": 41,
+    "genero": "hombre",
+    "oferta": true,
+    "nuevo": false,
+    "categoria": "camperas"
+  },
+  {
+    "imagen": "../img/articulos-generales/art-campera4.jpg",
+    "nombre": "Chaleco rompe viento",
+    "descripcion": "Chaleco rompe viento en mofelos negro, girs y azul oscuro. Talles XL,XXL y XXXL",
+    "precio": 5600,
+    "marca": "otros",
+    "talle": 41,
+    "genero": "hombre",
+    "oferta": false,
+    "nuevo": false,
+    "categoria": "camperas"
+  }
+]

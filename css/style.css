@@ -98,24 +98,25 @@
 .section-ofertas .card-content {
   width: 90%;
   border: 5px solid rgb(216, 219, 0);
+  overflow: hidden;
 }
 
 .card-foco {
   /* al igual que con el carrusel de promocion el width debe ser escalable y se debe ajustar dependiendo de cuantas tarjetas se desea mostrar */
-  width: 200%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   border: 2px solid red;
   transition: 0.5s ease;
 
-  transform: translateX(-50%);
+  transform: translateX(-0%);
 }
 
 .card-foco .card {
   border: 0.1px solid black;
   border-radius: 20px;
   /*  el width debe ser escalable segun la cantidad de tarjetas */
-  width: calc(100%/10 - 2em);
+  width: calc(100%/5 - 2em);
   height: 350px;
 
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);

@@ -1,6 +1,6 @@
 [
   {
-    "imagen": "../img/articulos-generales/art-calzado.jpg",
+    "imagen": "./img/articulos-generales/art-calzado.jpg",
     "nombre": "Zapatilla Nike",
     "descripcion": "Zapatilla nike blanco con negro. Talles desde 36 al 43",
     "precio": 1100,

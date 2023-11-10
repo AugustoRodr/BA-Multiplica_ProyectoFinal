@@ -80,8 +80,44 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then(data => {
       console.log(data)
+      let cardFoco = document.querySelector(".card-foco")
       data.forEach((articulo, i) => {
-        console.log(articulo)
+        if (articulo.oferta == true) {
+          console.log(articulo)
+          // segun el maquetado hecho en html, probado con anterioridad, creo y anido las etiquetas una dentro de la otra y agrego sus clases respectivas
+          let article = document.createElement("article")
+          let cardImg = document.createElement("div")
+          let cardInfo = document.createElement("div")
+
+          let img = document.createElement("img")
+          let cardPrecio = document.createElement("p")
+          let cardDesc = document.createElement("p")
+          let btn = document.createElement("button")
+
+          article.classList.add("card")
+          cardImg.classList.add("card-img")
+          cardInfo.classList.add("card-info")
+          cardPrecio.classList.add("card-precio")
+          cardDesc.classList.add("card-desc")
+          btn.classList.add("btn-ver")
+
+          img.src = articulo.imagen
+          img.alt = articulo.nombre
+          cardPrecio.textContent = `Precio: $${articulo.precio}`
+          cardDesc.textContent = `Descripcion: ${articulo.descripcion}`
+          btn.textContent = "ver"
+
+          // empiezo a anidar las etiquetas
+          cardImg.appendChild(img)
+          cardInfo.appendChild(cardPrecio)
+          cardInfo.appendChild(cardDesc)
+          cardInfo.appendChild(btn)
+
+          article.appendChild(cardImg)
+          article.appendChild(cardInfo)
+
+          cardFoco.appendChild(article)
+        }
       })
     })
 })

@@ -71,6 +71,26 @@ document.addEventListener("DOMContentLoaded", function () {
 // - El funcionamiento debe ser similar al del productos.html pero de forma horizontal
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  let indice = 0
+
+  function cambiarSlider(data, move) {
+    let foco = document.querySelector(".card-foco")
+    let desplaza = 100 * 5 / data.length
+    indice += move
+    console.log(indice)
+    if ((indice == (data.length / 5) || (indice == -1))) {
+      indice = 0
+      console.log(indice)
+      foco.style.transform = `translateX(-${desplaza * indice}%)`
+    } else {
+      foco.style.transform = `translateX(-${desplaza * indice}%)`
+    }
+  }
+
+  function crearTarjetas(data, foco) {
+
+  }
   fetch("./js/articulos.json")
     .then(respuesta => {
       if (respuesta.ok) {
@@ -79,46 +99,55 @@ document.addEventListener("DOMContentLoaded", function () {
       return respuesta.json()
     })
     .then(data => {
-      console.log(data)
+      // console.log(data)
+      let dataOferta = data.filter(art => art.oferta == true)
+      // console.log(dataOferta)
       let cardFoco = document.querySelector(".card-foco")
-      data.forEach((articulo, i) => {
-        if (articulo.oferta == true) {
-          console.log(articulo)
-          // segun el maquetado hecho en html, probado con anterioridad, creo y anido las etiquetas una dentro de la otra y agrego sus clases respectivas
-          let article = document.createElement("article")
-          let cardImg = document.createElement("div")
-          let cardInfo = document.createElement("div")
 
-          let img = document.createElement("img")
-          let cardPrecio = document.createElement("p")
-          let cardDesc = document.createElement("p")
-          let btn = document.createElement("button")
+      cardFoco.style.width = `${100 * (dataOferta.length / 5)}%`
 
-          article.classList.add("card")
-          cardImg.classList.add("card-img")
-          cardInfo.classList.add("card-info")
-          cardPrecio.classList.add("card-precio")
-          cardDesc.classList.add("card-desc")
-          btn.classList.add("btn-ver")
+      dataOferta.forEach((articulo, i) => {
+        // console.log(articulo)
+        // segun el maquetado hecho en html, probado con anterioridad, creo y anido las etiquetas una dentro de la otra y agrego sus clases respectivas
+        let article = document.createElement("article")
+        let cardImg = document.createElement("div")
+        let cardInfo = document.createElement("div")
 
-          img.src = articulo.imagen
-          img.alt = articulo.nombre
-          cardPrecio.textContent = `Precio: $${articulo.precio}`
-          cardDesc.textContent = `Descripcion: ${articulo.descripcion}`
-          btn.textContent = "ver"
+        let img = document.createElement("img")
+        let cardPrecio = document.createElement("p")
+        let cardDesc = document.createElement("p")
+        let btn = document.createElement("button")
 
-          // empiezo a anidar las etiquetas
-          cardImg.appendChild(img)
-          cardInfo.appendChild(cardPrecio)
-          cardInfo.appendChild(cardDesc)
-          cardInfo.appendChild(btn)
+        article.classList.add("card")
+        cardImg.classList.add("card-img")
+        cardInfo.classList.add("card-info")
+        cardPrecio.classList.add("card-precio")
+        cardDesc.classList.add("card-desc")
+        btn.classList.add("btn-ver")
 
-          article.appendChild(cardImg)
-          article.appendChild(cardInfo)
+        img.src = articulo.imagen
+        img.alt = articulo.nombre
+        cardPrecio.textContent = `Precio: $${articulo.precio}`
+        cardDesc.textContent = `Descripcion: ${articulo.descripcion}`
+        btn.textContent = "ver"
 
-          cardFoco.appendChild(article)
-        }
+        // empiezo a anidar las etiquetas
+        cardImg.appendChild(img)
+        cardInfo.appendChild(cardPrecio)
+        cardInfo.appendChild(cardDesc)
+        cardInfo.appendChild(btn)
+
+        article.appendChild(cardImg)
+        article.appendChild(cardInfo)
+        article.style.width = `calc(100% / ${dataOferta.length} - 2em)`
+
+        cardFoco.appendChild(article)
       })
+
+      document.querySelector(".prev").addEventListener("click", () => cambiarSlider(dataOferta, -1))
+
+      document.querySelector(".next").addEventListener("click", () => cambiarSlider(dataOferta, 1))
+
     })
 })
 

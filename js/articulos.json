@@ -154,5 +154,29 @@
     "oferta": true,
     "nuevo": true,
     "categoria": "pantalones"
+  },
+  {
+    "imagen": "./img/articulos-generales/art-pantalon4.jpg",
+    "nombre": "jogger",
+    "descripcion": "Jogger gabardina rigida sin puño. Talles desde M hasta XXL",
+    "precio": 3400,
+    "marca": "adidas",
+    "talle": "L",
+    "genero": "hombre",
+    "oferta": false,
+    "nuevo": true,
+    "categoria": "pantalones"
+  },
+  {
+    "imagen": "./img/articulos-generales/art-remeras.jpg",
+    "nombre": "remera maritex",
+    "descripcion": "Remeras manga corta, cuello redondo diferentes modelos. Talles desde M hasta XXL",
+    "precio": 5600,
+    "marca": "adidas",
+    "talle": "XL",
+    "genero": "hombre",
+    "oferta": false,
+    "nuevo": true,
+    "categoria": "pantalones"
   }
 ]

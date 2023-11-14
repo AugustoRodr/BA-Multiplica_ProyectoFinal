@@ -11,13 +11,19 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <a href="./templates/productos.html">Productos</a>
-      <a href="#ofertas">Ofertas</a>
-      <a href="#footer">Contactanos</a>
-      <a href="#">Sobre nosotros</a>
-      <a href="./templates/login.html">Iniciar sesion</a>
+      <a class="inicio" href="./index.html">Indumentaria <img src="./img/Logo-version1.png" alt="logo-pagina"></a>
+      <a class="nav-item" href="./templates/productos.html">Productos</a>
+      <a class="nav-item" href="#ofertas">Ofertas</a>
+      <a class="nav-item" href="#nuevos">Nuevos</a>
+      <a class="nav-item" href="#footer">Contactanos</a>
+      <a class="nav-item" href="./templates/login.html">Iniciar sesion</a>
     </nav>
+    <a id="scroll-to-top">&#9650;</a>
   </header>
+
+  <!-- <h1>Indimentaria<img src="./img/Logo-version1.png" alt="logo de la pagina"></h1> -->
+
+  <h1>Indumentaria Style M&A</h1>
 
   <main id="carrusel" class="carrusel">
     <section id="foco" class="foco">
@@ -28,9 +34,9 @@
     </ul>
   </main>
 
-  <hr>
+  <!-- <hr> -->
 
-  <h3 id="ofertas">Ofertas</h3>
+  <h3 id="ofertas" class="ofertas">Ofertas</h3>
   <section class="section-ofertas">
     <a class="prev">&#10094;</a>
 
@@ -44,34 +50,20 @@
     <a class="next">&#10095;</a>
   </section>
 
-  <hr>
+  <!-- <hr> -->
 
-  <h3>Nuevos Articulos</h3>
-  <!-- <section class="section-nuevos">
-    <article>
-      <img src="./img/nuevos-articulos/art-1.jpg" alt="nuevo articulo 1">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, rem repudiandae atque vero quos maiores
-        provident similique beatae deserunt corrupti quasi ipsa error doloremque voluptas impedit labore a ullam veniam?
-      </p>
-    </article>
-    <article>
-      <img src="./img/nuevos-articulos/art-2.jpg" alt="nuevo articulo 2">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ad! Esse perspiciatis perferendis enim
-        architecto minus consequuntur ex harum omnis nihil, vero dolorem doloremque sint laudantium, facere quisquam
-        blanditiis autem.</p>
-    </article>
-    <article>
-      <img src="./img/nuevos-articulos/art-3.jpg" alt="nuevo articuo 3">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci accusamus iure dolore quos ex quia et ipsum.
-        Velit sapiente vel itaque ea quasi ad repellat harum earum quibusdam, est nam!</p>
-    </article>
-    <article>
-      <img src="./img/nuevos-articulos/art-4.jpg" alt="nuevo articulo 4">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis praesentium, provident doloremque dolorem
-        reprehenderit neque ducimus iusto consectetur, ipsa omnis libero mollitia quia fuga dolorum ad, obcaecati quae
-        eos sint?</p>
-    </article>
-  </section> -->
+  <h3 id="nuevos" class="nuevos">Nuevos</h3>
+  <section class="section-nuevos">
+    <a class="prev">&#10094;</a>
+
+    <div class="card-content">
+      <div class="card-foco">
+        <!-- las tarjetas se agregan con js -->
+      </div>
+    </div>
+
+    <a class="next">&#10095;</a>
+  </section>
 
   <footer class="footer" id="footer">
     <article class="contacto">

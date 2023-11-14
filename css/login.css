@@ -8,6 +8,11 @@
   /* color: black; */
 }
 
+/* para que no se vea el scrollbar */
+html::-webkit-scrollbar {
+  display: none;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -15,24 +20,43 @@ header {
   z-index: 2;
 }
 
-nav {
+.nav {
   /* border: 2px solid red; */
-  background-color: rgb(255, 255, 53);
-  /* background-color: #EBE76C; */
-  /* background-color: #F0B86E; */
-  height: 40px;
+  background-color: rgb(255, 255, 70);
+  height: 65px;
   display: flex;
   align-items: center;
   justify-content: end;
 }
 
-nav a {
-  background-color: white;
+.nav .inicio {
   color: black;
-  border: .1px solid black;
-  border-radius: 25px;
-  padding: 2px 10px;
+  height: 80%;
+  margin-right: auto;
+  padding-left: 1%;
+  display: flex;
+  align-items: center;
+}
+
+.nav .inicio img {
+  height: 100%;
+  /* align-self: flex-start; */
+  margin: 0 5px;
+  /* text-decoration: none; */
+}
+
+.nav .nav-items {
+  color: black;
+  padding: 3px 10px;
   margin: 0px 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  transition: 0.3s ease-in;
+}
+
+.nav .nav-items:hover {
+  color: white;
+  background-color: black;
 }
 
 .background {
@@ -61,16 +85,14 @@ section {
   flex-direction: row;
   justify-content: center;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+  /* transition: 0.5s ease; */
 }
 
-section .form-login,
+.form-login,
 .form-signup {
-  /* border: 2px solid yellowgreen; */
   display: flex;
   opacity: 1;
-  /* overflow: hidden; */
-  transition: opacity 0.9s;
-  /* border-radius: 20px; */
+  transition: 0.9s ease;
 }
 
 .form-signup {
@@ -79,7 +101,7 @@ section .form-login,
 
 .msj-login,
 .msj-signup {
-  background-color: rgb(255, 255, 53);
+  background-color: rgb(255, 255, 70);
   /* background-color: #F0B86E; */
   width: 50%;
   display: flex;
@@ -121,7 +143,23 @@ form h4 {
   margin: 5px 0px;
 }
 
-.conten-logs {
+#content-login input,
+#content-signup input {
+  border: none;
+  border-bottom: 2px solid yellow;
+  outline: none;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.096);
+  transition: 0.5s ease;
+}
+
+#content-login input:focus,
+#content-signup input:focus {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 0.1px solid rgb(0, 0, 0);
+}
+
+.content-logs {
   /* border: 2px solid red; */
   width: 55%;
   display: flex;
@@ -130,6 +168,7 @@ form h4 {
   z-index: 3;
 }
 
-.conten-logs img {
-  width: 15%;
+.content-logs img {
+  width: 20%;
+  cursor: pointer;
 }

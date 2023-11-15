@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardName.textContent = articulo.nombre
       cardPrecio.textContent = `Precio: $${articulo.precio}`
       cardDesc.textContent = `Descripcion: ${articulo.descripcion}`
-      btn.textContent = "ver"
+      btn.textContent = "Ver"
 
       // empiezo a anidar las etiquetas
       cardImg.appendChild(img)
@@ -155,5 +155,22 @@ document.addEventListener("DOMContentLoaded", function () {
   scrollToTop.addEventListener("click", function () {
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
+  })
+})
+
+// Agrego funcionalidad al formulario de contacto
+// - Al precionar el btn de contactanos debe de aparecer el formulario
+// - Al precionar la X que se muestra en la esquina superior derecha el formulario debe de desaparecer
+document.addEventListener("DOMContentLoaded", function () {
+  let btnContact = document.querySelector("#form-contact")
+  let conteinerForm = document.querySelector("#conteiner-form")
+  let cerrarForm = document.querySelector("#cerrar-form")
+
+  btnContact.addEventListener("click", function () {
+    conteinerForm.classList.add("mostrar")
+  })
+
+  cerrarForm.addEventListener("click", function () {
+    conteinerForm.classList.remove("mostrar")
   })
 })

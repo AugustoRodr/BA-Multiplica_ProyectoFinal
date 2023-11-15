@@ -15,7 +15,8 @@
       <a class="nav-item" href="./templates/productos.html">Productos</a>
       <a class="nav-item" href="#ofertas">Ofertas</a>
       <a class="nav-item" href="#nuevos">Nuevos</a>
-      <a class="nav-item" href="#footer">Contactanos</a>
+      <a class="nav-item" id="form-contact" href="#">Contactanos</a>
+      <a class="nav-item" id="form-contact" href="#footer">Sobre nosotros</a>
       <a class="nav-item" href="./templates/login.html">Iniciar sesion</a>
     </nav>
     <a id="scroll-to-top">&#9650;</a>
@@ -34,6 +35,23 @@
     </ul>
   </main>
 
+  <div id="conteiner-form" class="oculto">
+    <div id="form">
+      <span id="cerrar-form">&times;</span>
+      <h2>Complete el formulario</h2>
+      <form>
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre"><br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido"><br>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" required><br>
+        <label for="comentario">Comentario</label><br>
+        <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea><br>
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </div>
   <!-- <hr> -->
 
   <h3 id="ofertas" class="ofertas">Ofertas</h3>

@@ -124,6 +124,30 @@ section {
 .msj-login p,
 .msj-signup p {
   max-width: 50%;
+  max-height: 50%;
+  overflow: scroll;
+}
+
+.msj-login p::-webkit-scrollbar,
+.msj-signup p::-webkit-scrollbar {
+  display: none;
+}
+
+.msj-login button,
+.msj-signup button {
+  padding: 2px 5px;
+  margin-top: 5px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 70);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+.msj-login button:hover,
+.msj-signup button:hover {
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
 }
 
 form {
@@ -157,6 +181,25 @@ form h4 {
 #content-signup input:focus {
   background-color: rgb(255, 255, 255);
   border-bottom: 0.1px solid rgb(0, 0, 0);
+}
+
+#content-login button,
+#content-signup button {
+  background-color: rgb(255, 255, 70);
+  border: 1px solid black;
+  margin: 7px 0;
+  padding: 3px 5px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+#content-login button:hover,
+#content-signup button:hover {
+  background-color: black;
+  color: white;
+  /* box-shadow: 0 4px 16px yellow; */
 }
 
 .content-logs {

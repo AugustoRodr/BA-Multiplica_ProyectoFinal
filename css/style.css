@@ -171,7 +171,7 @@ h1 {
   margin: 7px 0;
 }
 
-#conteiner-form input:not([type="textarea"]):not([type="submit"]) {
+#conteiner-form input:not([type="textarea"]) {
   border: none;
   border-bottom: 1px solid #000000;
   background-color: #ffffff00;
@@ -184,7 +184,21 @@ h1 {
 #conteiner-form input:not([type="textarea"]):not([type="submit"]):focus {
   border-bottom: 1px solid rgb(255, 255, 70);
   background-color: rgb(228, 228, 1);
-  /* color: rgb(0, 0, 0); */
+}
+
+#conteiner-form button {
+  margin: 1px 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 70);
+  transition: 0.3s ease-in;
+}
+
+#conteiner-form button:hover {
+  background-color: black;
+  color: white;
 }
 
 

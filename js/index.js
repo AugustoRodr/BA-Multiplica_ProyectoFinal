@@ -114,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
     section.querySelector(".next").addEventListener("click", () => cambiarSlider(data, 1, foco))
   }
 
-
   // nota: en lo posible mantener la cantidad de articulos, ya sea de ofertas y/o nuevos, divisibles por 5
   fetch("./js/articulos.json")
     .then(respuesta => {

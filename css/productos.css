@@ -69,7 +69,43 @@
   margin: 10px 0px;
 }
 
+.filtro-form select {
+  background-color: rgb(255, 255, 70);
+  padding: 1px 5px;
+  font-size: 16px;
+  /* border: 1px solid black; */
+  border: none;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  outline: none;
+  transition: .2s ease-in;
+}
+
+.filtro-form select:focus {
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.filtro-form button {
+  margin-top: 10px;
+  padding: 3px;
+  background-color: rgb(255, 255, 70);
+  border: 1px solid black;
+  transition: .3s ease-in;
+}
+
+.filtro-form button:hover {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 16px black;
+}
+
+
+
 /* Apartado de las cards */
+
 .cards-content {
   /* border: 2px solid red; */
   width: 100%;
@@ -80,6 +116,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.cards-content button {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.cards-content .botones-content button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 16px yellow;
 }
 
 .card {
@@ -101,6 +154,21 @@
   border-radius: 20px;
 }
 
+/* .card-info button {
+  background-color: rgb(44, 44, 44);
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: .3s ease;
+} */
+
+.card-info button:hover {
+  background-color: white;
+  color: black;
+}
 
 .card-info p:first-of-type {
   width: 95%;

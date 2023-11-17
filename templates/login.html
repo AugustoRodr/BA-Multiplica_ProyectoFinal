@@ -14,21 +14,44 @@
       <a class="inicio" href="../index.html">Indumentaria<img src="../img/Logo-version1.png"
           alt="logo de la pagina"></a>
       <a class="nav-items" href="./productos.html">Productos</a>
-      <a class="nav-items" href="#">Contactanos</a>
-      <a class="nav-items" href="#">Sobre nosotros</a>
+      <a class="nav-items" id="form-contact" href="#">Contactanos</a>
     </nav>
   </header>
 
   <div class="background"></div>
 
+  <div id="conteiner-form" class="oculto">
+    <div id="form">
+      <span id="cerrar-form">&times;</span>
+      <h2>Complete el formulario</h2>
+      <form>
+        <label for="nombre-contact">Nombre: </label>
+        <input type="text" id="nombre-contact"><br>
+        <label for="apellido-contact">Apellido</label>
+        <input type="text" id="apellido-contact"><br>
+        <label for="email-contact">E-mail: </label>
+        <input type="email" id="email-contact" required><br>
+        <label for="comentario-contanct">Comentario</label>
+        <textarea name="comentario" id="comentario-contanct" cols="30" rows="5"></textarea><br>
+        <div id="content-btn">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <section>
+    <img id="succes-icon" src="../img/icons/successfully-icon.png">
+    <img id="failed-icon" src="../img/icons/failed-icon.png">
+
     <div class="form-login" id="form-login">
-      <form method="post" id="content-login">
+      <form method="get" id="content-login">
         <h3>Iniciar Sesion</h3>
         <label for="user-login">Usuario</label>
-        <input type="text" id="user-login" required>
+        <input type="text" id="user-login" class="userName" required>
         <label for="pass-login">Contraseña</label>
-        <input type="password" id="pass-login" required>
+        <input type="password" id="pass-login" class="password" required>
         <button type="submit">Ingresar</button>
         <button type="reset">Limpiar</button>
         <h4>Ó</h4>
@@ -49,6 +72,7 @@
         <button id="show-signup">Registrarse &#10095;</button>
       </div>
     </div>
+
     <div class="form-signup" id="form-signup">
       <div class="msj-signup">
         <img src="../img/Logo-version1.png" alt="logo de la pagina">
@@ -61,18 +85,18 @@
         <!-- boton cambia a iniciar sesion -->
         <button type="button" id="show-login">&#10094; Iniciar Sesion</button>
       </div>
-      <form method="post" id="content-signup">
+      <form method="get" id="content-signup">
         <h3>Registrarse</h3>
         <label for="user-signup">Usuario</label>
-        <input type="text" id="user-signup" required>
+        <input type="text" id="user-signup" class="userName" required>
         <label for="name">Nombre</label>
         <input type="text" id="name" required>
         <label for="last-name">Apellido</label>
-        <input type="text" name="" id="last-name" required>
+        <input type="text" name="" id="last-name">
         <label for="email">E-mail</label>
-        <input type="email" name="" id="email" required>
+        <input type="email" id="email" required>
         <label for="pass-signup">Contraseña</label>
-        <input type="password" name="" id="pass-signup" required>
+        <input type="password" id="pass-signup" class="password" required>
         <button type="submit">Registrarse</button>
         <button type="reset">Limpiar</button>
         <h4>Ó</h4>

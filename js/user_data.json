@@ -1,0 +1,82 @@
+[
+  {
+    "first_name": "Camey",
+    "last_name": "De Dei",
+    "email": "cdedei0@bloglovin.com",
+    "gender": "Male",
+    "password": "cdedei0",
+    "userName": "cdedei0"
+  },
+  {
+    "first_name": "Rriocard",
+    "last_name": "Parfrey",
+    "email": "rparfrey1@boston.com",
+    "gender": "Male",
+    "password": "rparfrey1",
+    "userName": "rparfrey1"
+  },
+  {
+    "first_name": "Heddi",
+    "last_name": "Novelli",
+    "email": "hnovelli2@rambler.ru",
+    "gender": "Female",
+    "password": "hnovelli2",
+    "userName": "hnovelli2"
+  },
+  {
+    "first_name": "Locke",
+    "last_name": "Wynrahame",
+    "email": "lwynrahame3@latimes.com",
+    "gender": "Male",
+    "password": "lwynrahame3",
+    "userName": "lwynrahame3"
+  },
+  {
+    "first_name": "Caprice",
+    "last_name": "Edgerly",
+    "email": "cedgerly4@umich.edu",
+    "gender": "Female",
+    "password": "cedgerly4",
+    "userName": "cedgerly4"
+  },
+  {
+    "first_name": "Hamid",
+    "last_name": "Dutch",
+    "email": "hdutch5@reuters.com",
+    "gender": "Male",
+    "password": "hdutch5",
+    "userName": "hdutch5"
+  },
+  {
+    "first_name": "Dulcia",
+    "last_name": "Piatti",
+    "email": "dpiatti6@hubpages.com",
+    "gender": "Female",
+    "password": "dpiatti6",
+    "userName": "dpiatti6"
+  },
+  {
+    "first_name": "Ebenezer",
+    "last_name": "Silvester",
+    "email": "esilvester7@github.io",
+    "gender": "Male",
+    "password": "esilvester7",
+    "userName": "esilvester7"
+  },
+  {
+    "first_name": "Pietro",
+    "last_name": "Santarelli",
+    "email": "psantarelli8@ebay.com",
+    "gender": "Male",
+    "password": "psantarelli8",
+    "userName": "psantarelli8"
+  },
+  {
+    "first_name": "Wayland",
+    "last_name": "Gaythorpe",
+    "email": "wgaythorpe9@addthis.com",
+    "gender": "Male",
+    "password": "wgaythorpe9",
+    "userName": "wgaythorpe9"
+  }
+]

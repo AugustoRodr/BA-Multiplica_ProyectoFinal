@@ -181,7 +181,7 @@ h1 {
   transition: .25s ease-in;
 }
 
-#conteiner-form input:not([type="textarea"]):not([type="submit"]):focus {
+#conteiner-form input:not([type="textarea"]):focus {
   border-bottom: 1px solid rgb(255, 255, 70);
   background-color: rgb(228, 228, 1);
 }
@@ -215,11 +215,6 @@ h1 {
   opacity: 1;
   visibility: visible;
 }
-
-/* #conteiner-form.ocultar {
-  opacity: 0;
-  visibility: hidden;
-} */
 
 /* Apartado de ofertas y nuevos*/
 .ofertas,
@@ -323,7 +318,9 @@ h1 {
 .prev {
   /* border: 2px solid red; */
   cursor: pointer;
-  color: black;
+  background-color: black;
+  border: 2px solid black;
+  color: white;
   width: auto;
   height: auto;
   padding: 10px;
@@ -333,17 +330,46 @@ h1 {
 
 .next:hover,
 .prev:hover {
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 16px yellow;
 }
 
 /* Pie de pagina */
 .footer {
-  background-color: rgb(255, 255, 70);
+  background-image: linear-gradient(0deg, white 60%, yellow 90%);
+  width: 100%;
   margin-top: 10px;
 }
 
-.contacto {
+.footer .info-footer {
+  display: flex;
+  justify-content: start;
+}
+
+.info-footer img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer .info-footer .contacto-footer,
+.footer .info-footer .redes-footer {
   display: flex;
   flex-direction: column;
+  padding: 10px 20px;
+}
+
+.contacto-footer label,
+.redes-footer a {
+  display: flex;
+}
+
+.footer .imgs-footer {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+.imgs-footer img {
+  width: calc(100%/4);
 }

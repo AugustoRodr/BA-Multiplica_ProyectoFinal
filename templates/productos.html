@@ -12,7 +12,7 @@
   <header class="header">
     <nav class="nav">
       <a class="inicio" href="../index.html">Indumentaria <img src="../img/Logo-version1.png" alt="logo-pagina"></a>
-      <a class="nav-item" href="#">Contactanos</a>
+      <a class="nav-item" id="form-contact" href="#">Contactanos</a>
       <a class="nav-item" href="./login.html">Iniciar sesion</a>
     </nav>
   </header>
@@ -41,6 +41,25 @@
       <button type="reset">Filtrar</button>
     </form>
   </aside>
+
+  <div id="conteiner-form">
+    <div id="form">
+      <span id="cerrar-form">&times;</span>
+      <h2>Completar el formulario</h2>
+      <form>
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre"><br>
+        <label for="apellido">Apellido: </label>
+        <input type="text" id="apellido"><br>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" required><br>
+        <label for="comentario">Comentario: </label><br>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+      </form>
+    </div>
+  </div>
   <section id="cards-content" class="cards-content">
     <div class="botones-content">
       <button id="anterior">Anterior</button>

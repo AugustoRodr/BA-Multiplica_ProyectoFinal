@@ -173,3 +173,17 @@ btnAnt.addEventListener("click", () => {
   prodAnterior()
 })
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  let btnContact = document.querySelector("#form-contact")
+  let conteinerForm = document.querySelector("#conteiner-form")
+  let cerrarForm = document.querySelector("#cerrar-form")
+
+  btnContact.addEventListener("click", function () {
+    conteinerForm.classList.add("mostrar")
+  })
+
+  cerrarForm.addEventListener("click", function () {
+    conteinerForm.classList.remove("mostrar")
+  })
+})
